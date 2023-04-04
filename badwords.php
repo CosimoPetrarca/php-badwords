@@ -7,6 +7,9 @@
     <title>Bad Words</title>
 </head>
 <body>
-    
+    <h2> La tua frase è: <?php echo $_GET['frase'] ?></h2>
+    <p> La tua frase è lunga: <?php echo strlen($_GET['frase']) ?> lettere</p>
+    <h2> La tua frase censurata è: <?php echo str_replace($_GET['badwords'],'****',$_GET['frase']) ?></h2>
+    <p> La frase censurata è lunga: <?php echo strlen(str_replace($_GET['badwords'],'****',$_GET['frase'])) ?> lettere</p>
 </body>
 </html>
